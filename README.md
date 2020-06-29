@@ -17,8 +17,8 @@ backend:~$ sudo apt install mysql-server -y
 ```
 backend:~$ git clone https://github.com/rodrigocastrillon/nodejs_mysql_demo
 backend:~$ cd nodejs_mysql_demo/backend
-backend:~$ mysql -uroot < create_db.sql
-backend:~$ mysql -uroot -e "GRANT ALL PRIVILEGES ON socka.* TO 'node'@'%' IDENTIFIED BY 'node';"
+backend:~$ sudo mysql -uroot < create_db.sql
+backend:~$ sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON socka.* TO 'node'@'%' IDENTIFIED BY 'node';"
 ```
 
 3. Configure MySQL Server:
