@@ -27,7 +27,6 @@ backend:~$ sudo sed -i.bak '/bind-address/d' /etc/mysql/mysql.conf.d/mysqld.cnf
 backend:~$ sudo service mysql restart
 ```
 
-
 ### Frontend
 1. Install dependencies:  
 ```
@@ -56,3 +55,11 @@ DB Server: X.X.X.X
 Server running on port: 80
 Connected to database
 ```
+
+## Usage:
+1. Open your browser and navigate to "http://<FRONTEND_IP>/"  
+2. You may add new players on "Add a Player" link, add an image, etc
+3. There is also a delete funcion implemented, to delete players.
+
+#### Original post:
+https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
