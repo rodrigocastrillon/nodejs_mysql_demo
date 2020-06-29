@@ -15,7 +15,7 @@ backend:~$ sudo apt install mysql-server -y
 
 2. Setup the database:
 ```
-backend:~$ git clone <THIS REPO>
+backend:~$ git clone https://github.com/rodrigocastrillon/nodejs_mysql_demo
 backend:~$ cd nodejs_mysql_demo/backend
 backend:~$ mysql -uroot < create_db.sql
 backend:~$ mysql -uroot -e "GRANT ALL PRIVILEGES ON socka.* TO 'node'@'%' IDENTIFIED BY 'node';"
@@ -25,7 +25,6 @@ backend:~$ mysql -uroot -e "GRANT ALL PRIVILEGES ON socka.* TO 'node'@'%' IDENTI
 ```
 backend:~$ sudo sed -i.bak '/bind-address/d' /etc/mysql/mysql.conf.d/mysqld.cnf
 backend:~$ sudo service mysql restart
-backend:~$ 
 ```
 
 
@@ -46,3 +45,16 @@ frontend:~$ npm install express express-fileupload body-parser mysql ejs req-fla
 frontend:~$ sudo npm install nodemon -g
 ```
 
+3. Get the code and run it:
+```
+frontend:~$ git clone https://github.com/rodrigocastrillon/nodejs_mysql_demo
+frontend:~$ cd nodejs_mysql_demo/
+frontend:~$ sudo node app.js <DB BACKEND IP>
+```
+*NOTE:* Use the 'sudo' command above or else Node will fail to use the HTTP port 80.  
+You should then see:  
+```
+DB Server: X.X.X.X
+Server running on port: 80
+Connected to database
+```
