@@ -41,7 +41,7 @@ frontend:~$ sudo apt install nodejs -y
 ```
 frontend:~$ npm init
 (Hit 'Enter' for all prompts)
-frontend:~$ npm install express express-fileupload body-parser mysql ejs req-flash --save
+frontend:~$ sudo npm install express express-fileupload body-parser mysql ejs req-flash --save
 frontend:~$ sudo npm install nodemon -g
 ```
 
