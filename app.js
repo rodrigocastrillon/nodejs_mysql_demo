@@ -9,12 +9,16 @@ const {getHomePage} = require('./routes/index');
 const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
 const port = 5000;
 
+// Get options from command line
+var dbserver = process.argv.slice(2).toString();
+console.log("DB Server: " + dbserver);
+
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
-const db = mysql.createConnection ({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+var db = mysql.createConnection ({
+    host: dbserver,
+    user: 'node',
+    password: 'node',
     database: 'socka'
 });
 

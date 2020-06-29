@@ -6,6 +6,29 @@ Simple backend/frontend code with MySQL and Node.JS
 
 ## Instructions:
 
+### Backend
+1. Install dependencies:
+```
+backend:~$ sudo apt update
+backend:~$ sudo apt install mysql-server -y
+```
+
+2. Setup the database:
+```
+backend:~$ git clone <THIS REPO>
+backend:~$ cd nodejs_mysql_demo/backend
+backend:~$ mysql -uroot < create_db.sql
+backend:~$ mysql -uroot -e "GRANT ALL PRIVILEGES ON socka.* TO 'node'@'%' IDENTIFIED BY 'node';"
+```
+
+3. Configure MySQL Server:
+```
+backend:~$ sudo sed -i.bak '/bind-address/d' /etc/mysql/mysql.conf.d/mysqld.cnf
+backend:~$ sudo service mysql restart
+backend:~$ 
+```
+
+
 ### Frontend
 1. Install dependencies:  
 ```
@@ -23,9 +46,3 @@ frontend:~$ npm install express express-fileupload body-parser mysql ejs req-fla
 frontend:~$ sudo npm install nodemon -g
 ```
 
-### Backend
-1. Install dependencies:  
-```
-backend:~$ sudo apt update
-backend:~$ sudo apt install mysql-server -y
-```

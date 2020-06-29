@@ -8,8 +8,8 @@ module.exports = {
                 res.redirect('/');
             }
             res.render('index.ejs', {
-                title: Welcome to Socka | View Players
-                ,players: result
+                title: 'Welcome to Socka | View Players',
+                players: result
             });
         });
     },
