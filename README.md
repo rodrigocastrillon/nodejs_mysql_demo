@@ -9,8 +9,15 @@ Simple backend/frontend code with MySQL and Node.JS
 ### Frontend
 1. Install dependencies:  
 ```
-frontend:~$ sudo apt-get install npm
+frontend:~$ curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+frontend:~$ sudo bash nodesource_setup.sh
+frontend:~$ sudo apt update
+frontend:~$ sudo apt install nodejs -y
 ```
 
-
 ### Backend
+1. Install dependencies:  
+```
+backend:~$ sudo apt update
+backend:~$ sudo apt install mysql-server -y
+```
